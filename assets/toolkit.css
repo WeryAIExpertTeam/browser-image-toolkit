@@ -31,3 +31,13 @@
   .panel-title { letter-spacing: .04em; }
   .btn { white-space: normal; }
 }
+
+/* Match the landing page brand (violet) */
+body.bifrost-shell, body.workbench-app {
+  --accent: #5b4bf5; --accent-hover: #3b2fd0; --accent-soft: #efecff;
+  --wb-primary: #5b4bf5; --wb-bg: #f6f5f1; --wb-surface-2: #fbfaf7; --wb-line: #e8e5df; --wb-line-strong: #d9d5cc;
+  --bg-0: #f6f5f1; --bg-2: #f3f2ee; --border: #e8e5df;
+}
+body.bifrost-shell .brand-mark, body.workbench-app .brand-mark { background: url(icon.svg) center / cover no-repeat; box-shadow: none; border-radius: 7px; }
+body.bifrost-shell .btn-primary, body.workbench-app .btn-primary { background: #5b4bf5; border-color: #5b4bf5; }
+body.bifrost-shell .btn-primary:hover:not(:disabled), body.workbench-app .btn-primary:hover:not(:disabled) { background: #3b2fd0; border-color: #3b2fd0; }

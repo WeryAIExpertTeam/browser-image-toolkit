@@ -19,7 +19,7 @@ function ease(t,type){
 
 /* Tab 切换 + breadcrumb */
 const tabNames={collage:'Collage',compress:'Compress images',cropper:'Grid crop',compare:'Before / after',cover:'Cover maker',bgremove:'Remove background'};
-document.querySelectorAll('.nav-item').forEach(item=>{
+document.querySelectorAll('.nav-item[data-tab]').forEach(item=>{
   item.addEventListener('click',()=>{
     document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));
     document.querySelectorAll('.tab-pane').forEach(x=>x.classList.remove('active'));
