@@ -117,6 +117,7 @@
       var it = self.find(+btn.closest('li').getAttribute('data-id')); if (!it) return;
       if (btn.getAttribute('data-act') === 'dl' && it.result) download(it.result.blob, outName(it.name, it.result.type));
       if (btn.getAttribute('data-act') === 'rm') self.remove(it);
+      if (btn.getAttribute('data-act') === 'cmp' && it.result && !it.result.kept) self.compare(it);
     });
   };
 
@@ -266,10 +267,51 @@
     } else {
       meta += '<span class="wc-spin" aria-label="Compressing"></span>';
     }
-    li.className = 'wc-item is-' + it.state;
-    li.innerHTML = '<img src="' + it.url + '" alt="" loading="lazy"><div class="wc-info"><div class="wc-name" translate="no">' + esc(it.name) +
+    var canCompare = it.state === 'done' && !it.result.kept;
+    li.className = 'wc-item is-' + it.state + (canCompare ? ' can-compare' : '');
+    li.innerHTML = '<button type="button" class="wc-thumb" aria-label="' + esc((canCompare ? 'Compare before and after: ' : 'Preview: ') + it.name) + '"' + (canCompare ? ' data-act="cmp" title="Compare before and after"' : ' disabled tabindex="-1"') +
+      '><img src="' + it.url + '" alt="" loading="lazy"></button><div class="wc-info"><div class="wc-name" translate="no">' + esc(it.name) +
       '</div><div class="wc-meta">' + meta + '</div></div>' + right +
       '<button type="button" class="wc-icon wc-icon-quiet" data-act="rm" title="Remove">' + ICON.close + '</button>';
+  };
+
+  // Full-screen before/after view with a draggable divider.
+  Compressor.prototype.compare = function (it) {
+    var after = URL.createObjectURL(it.result.blob);
+    var pct = Math.round((1 - it.result.blob.size / it.size) * 100);
+    if (document.querySelector('dialog.wc-cmp')) { URL.revokeObjectURL(after); return; }
+    var opener = document.activeElement, oldOverflow = document.body.style.overflow;
+    var box = document.createElement('dialog');
+    box.className = 'wc-cmp'; box.setAttribute('aria-label', 'Compare original and compressed image: ' + it.name);
+    box.innerHTML = '<div class="wc-cmp-box"><div class="wc-cmp-head"><b translate="no">' + esc(it.name) + '</b>' +
+      '<button type="button" class="wc-icon wc-icon-quiet" title="Close">' + ICON.close + '</button></div>' +
+      '<div class="wc-cmp-stage"><img src="' + it.url + '" alt="Original">' +
+      '<div class="wc-cmp-after"><img src="' + after + '" alt="Compressed"></div><div class="wc-cmp-line"></div>' +
+      '<span class="wc-cmp-tag l">Original · ' + fmt(it.size) + '</span>' +
+      '<span class="wc-cmp-tag r">Compressed · ' + fmt(it.result.blob.size) + (pct > 0 ? ' (−' + pct + '%)' : '') + '</span></div>' +
+      '<label class="wc-cmp-control">Comparison position<input type="range" min="0" max="100" value="50" aria-label="Comparison position"><span>Drag the image or use the slider. Esc closes.</span></label></div>';
+    document.body.appendChild(box);
+    var stage = box.querySelector('.wc-cmp-stage'), closeBtn = box.querySelector('button'), slider = box.querySelector('input');
+    function split(value) {
+      value = Math.min(100, Math.max(0, value));
+      stage.style.setProperty('--split', value + '%'); slider.value = String(value);
+    }
+    function move(x) {
+      var r = stage.getBoundingClientRect();
+      if (r.width) split((x - r.left) / r.width * 100);
+    }
+    function close() {
+      box.close(); box.remove(); URL.revokeObjectURL(after); document.body.style.overflow = oldOverflow;
+      if (opener && opener.isConnected) opener.focus();
+    }
+    stage.addEventListener('pointerdown', function (e) { stage.setPointerCapture(e.pointerId); move(e.clientX); });
+    stage.addEventListener('pointermove', function (e) { if (stage.hasPointerCapture(e.pointerId)) move(e.clientX); });
+    slider.addEventListener('input', function () { split(+slider.value); });
+    box.addEventListener('click', function (e) { if (e.target === box) close(); });
+    box.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
+    closeBtn.addEventListener('click', close);
+    document.body.style.overflow = 'hidden'; box.showModal();
+    closeBtn.focus();
   };
 
   Compressor.prototype.update = function () {

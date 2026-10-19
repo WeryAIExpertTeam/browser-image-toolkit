@@ -5,21 +5,21 @@
  */
 
 :root {
-  --wb-bg: #eef2f7;
+  --wb-bg: #fafafa;
   --wb-surface: #ffffff;
-  --wb-surface-2: #f8fafc;
-  --wb-line: #d8e0eb;
-  --wb-line-strong: #b7c4d4;
-  --wb-text: #172033;
-  --wb-muted: #637083;
-  --wb-subtle: #8a96a8;
-  --wb-primary: #1767e8;
-  --wb-primary-2: #0f766e;
-  --wb-primary-soft: rgba(23, 103, 232, .09);
+  --wb-surface-2: #fafafa;
+  --wb-line: #e7e7e7;
+  --wb-line-strong: #d4d4d4;
+  --wb-text: #0a0a0a;
+  --wb-muted: #525252;
+  --wb-subtle: #737373;
+  --wb-primary: #0a0a0a;
+  --wb-primary-2: #f44583;
+  --wb-primary-soft: rgba(10, 10, 10, .09);
   --wb-danger-soft: rgba(220, 38, 38, .08);
   --wb-radius: 10px;
-  --wb-shadow: 0 12px 28px rgba(15, 23, 42, .08);
-  --wb-shadow-sm: 0 1px 2px rgba(15, 23, 42, .06);
+  --wb-shadow: 0 12px 28px rgba(10, 10, 10, .08);
+  --wb-shadow-sm: 0 1px 2px rgba(10, 10, 10, .06);
 }
 
 body.workbench-app {
@@ -66,7 +66,7 @@ body.workbench-app .bread {
 
 body.workbench-app .sidebar {
   padding: 14px 10px;
-  background: #f8fafc;
+  background: #fafafa;
   border-right: 1px solid var(--wb-line);
 }
 
@@ -136,7 +136,7 @@ body.workbench-app .pane-head {
   z-index: 15;
   margin: 0;
   padding: 16px 24px 14px;
-  background: rgba(238, 242, 247, .94);
+  background: rgba(250, 250, 250, .94);
   border-bottom: 1px solid var(--wb-line);
   backdrop-filter: blur(12px);
 }
@@ -191,7 +191,7 @@ body.workbench-app .btn-primary {
 }
 
 body.workbench-app .btn-primary:hover:not(:disabled) {
-  background: #0f58d7;
+  background: #262626;
   transform: none;
 }
 
@@ -204,7 +204,7 @@ body.workbench-app .btn-secondary {
 body.workbench-app .btn-secondary:hover:not(:disabled),
 body.workbench-app .btn-ghost:hover:not(:disabled) {
   background: var(--wb-primary-soft);
-  border-color: rgba(23, 103, 232, .24);
+  border-color: rgba(10, 10, 10, .24);
   color: var(--wb-primary);
   transform: none;
 }
@@ -281,8 +281,8 @@ body.workbench-app .panel-title::after {
 }
 
 body.workbench-app .workbench-source-panel {
-  border-color: rgba(23, 103, 232, .28);
-  background: linear-gradient(180deg, #fff, #f8fbff);
+  border-color: rgba(10, 10, 10, .28);
+  background: linear-gradient(180deg, #fff, #fafafa);
 }
 
 body.workbench-app .workbench-source-panel .panel-title {
@@ -290,7 +290,7 @@ body.workbench-app .workbench-source-panel .panel-title {
 }
 
 body.workbench-app .workbench-advanced {
-  background: #fbfcfe;
+  background: #fafafa;
 }
 
 body.workbench-app .workbench-collapse-btn {
@@ -315,7 +315,7 @@ body.workbench-app .panel.is-collapsed > :not(.panel-title) {
 
 body.workbench-app .panel.is-collapsed .workbench-collapse-btn {
   color: var(--wb-primary);
-  border-color: rgba(23, 103, 232, .24);
+  border-color: rgba(10, 10, 10, .24);
 }
 
 body.workbench-app input[type=text],
@@ -339,13 +339,13 @@ body.workbench-app input:focus,
 body.workbench-app select:focus,
 body.workbench-app textarea:focus {
   border-color: var(--wb-primary);
-  box-shadow: 0 0 0 3px rgba(23, 103, 232, .13);
+  box-shadow: 0 0 0 3px rgba(10, 10, 10, .13);
 }
 
 body.workbench-app .dropzone,
 body.workbench-app .compare-slot,
 body.workbench-app .grid-slot {
-  background: #f8fbff;
+  background: #fafafa;
   border-color: var(--wb-line-strong);
   border-radius: 10px;
 }
@@ -409,7 +409,7 @@ body.workbench-app .task-row:hover,
 body.workbench-app .list-row:hover,
 body.workbench-app .model-card:hover {
   border-color: var(--wb-line-strong);
-  background: #fbfdff;
+  background: #fafafa;
 }
 
 body.workbench-app .stats {
@@ -423,13 +423,13 @@ body.workbench-app .stat-v {
 
 body.workbench-app .logs {
   max-height: 190px;
-  background: #0f172a;
-  color: #cbd5e1;
-  border-color: #111827;
+  background: #0a0a0a;
+  color: #d4d4d4;
+  border-color: #0a0a0a;
 }
 
 body.workbench-app .log-msg {
-  color: #cbd5e1;
+  color: #d4d4d4;
 }
 
 body.workbench-app .empty {
@@ -444,7 +444,7 @@ body.workbench-app .empty svg {
 body.workbench-app .progress {
   height: 5px;
   border-radius: 999px;
-  background: #e5ebf3;
+  background: #ececec;
 }
 
 body.workbench-app .progress-bar {
@@ -453,8 +453,8 @@ body.workbench-app .progress-bar {
 }
 
 body.workbench-app .toast {
-  background: #111827;
-  border-color: #111827;
+  background: #0a0a0a;
+  border-color: #0a0a0a;
   color: #fff;
 }
 

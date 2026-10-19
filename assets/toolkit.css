@@ -32,12 +32,24 @@
   .btn { white-space: normal; }
 }
 
-/* Match the landing page brand (violet) */
+/* wery.ai brand: monochrome with the pink "wery." dot as accent (matches index.html) */
+@font-face { font-family: "Quicksand"; src: url("fonts/Quicksand-VF.ttf") format("truetype"); font-weight: 400 700; font-display: swap; }
 body.bifrost-shell, body.workbench-app {
-  --accent: #5b4bf5; --accent-hover: #3b2fd0; --accent-soft: #efecff;
-  --wb-primary: #5b4bf5; --wb-bg: #f6f5f1; --wb-surface-2: #fbfaf7; --wb-line: #e8e5df; --wb-line-strong: #d9d5cc;
-  --bg-0: #f6f5f1; --bg-2: #f3f2ee; --border: #e8e5df;
+  --accent: #0a0a0a; --accent-hover: #262626; --accent-soft: #f4f4f5; --border-accent: rgba(10,10,10,.35);
+  --wb-primary: #0a0a0a; --wb-primary-2: #f44583; --wb-bg: #fafafa; --wb-surface-2: #fafafa; --wb-line: #e7e7e7; --wb-line-strong: #d4d4d4;
+  --bg-0: #fafafa; --bg-2: #f4f4f5; --bg-3: #ececec; --border: #e7e7e7; --border-strong: #d4d4d4;
+  --text-1: #0a0a0a; --text-2: #404040; --text-3: #737373;
+  --tab-collage: #0a0a0a; --tab-compress: #0a0a0a; --tab-cropper: #0a0a0a; --tab-compare: #0a0a0a; --tab-cover: #0a0a0a; --tab-bgremove: #f44583;
 }
-body.bifrost-shell .brand-mark, body.workbench-app .brand-mark { background: url(icon.svg) center / cover no-repeat; box-shadow: none; border-radius: 7px; }
-body.bifrost-shell .btn-primary, body.workbench-app .btn-primary { background: #5b4bf5; border-color: #5b4bf5; }
-body.bifrost-shell .btn-primary:hover:not(:disabled), body.workbench-app .btn-primary:hover:not(:disabled) { background: #3b2fd0; border-color: #3b2fd0; }
+body.bifrost-shell .brand, body.workbench-app .brand { gap: 12px; }
+body.bifrost-shell .brand-logo, body.workbench-app .brand-logo { height: 36px; width: auto; display: block; }
+body.bifrost-shell .brand-text, body.workbench-app .brand-text { font-family: "Quicksand", ui-rounded, sans-serif; font-weight: 700; font-size: 16px; padding-left: 12px; border-left: 1px solid var(--border-strong); }
+body.bifrost-shell .brand-sep, body.workbench-app .brand-sep { display: none; }
+body.bifrost-shell .pane-title, body.workbench-app .pane-title { font-family: "Quicksand", ui-rounded, sans-serif; font-weight: 700; }
+body.bifrost-shell .pane-title::after, body.workbench-app .pane-title::after { content: "."; color: #f44583; }
+body.bifrost-shell .eyebrow, body.workbench-app .eyebrow { --eb-c: #737373; }
+body.bifrost-shell .btn, body.workbench-app .btn { border-radius: 999px; }
+body.bifrost-shell .btn-primary, body.workbench-app .btn-primary { background: #0a0a0a; border-color: #0a0a0a; color: #fff; }
+body.bifrost-shell .btn-primary:hover:not(:disabled), body.workbench-app .btn-primary:hover:not(:disabled) { background: #262626; border-color: #262626; }
+body.bifrost-shell .nav-item.active, body.workbench-app .nav-item.active { background: #fff; box-shadow: 0 0 0 1px #e7e7e7, 0 1px 2px rgba(10,10,10,.06); }
+body.bifrost-shell .panel-title, body.workbench-app .panel-title { color: #0a0a0a; }
