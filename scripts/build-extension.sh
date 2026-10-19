@@ -5,6 +5,9 @@ cd "$(dirname "$0")/.."
 mkdir -p extension/assets
 cp assets/compress-core.js assets/compress-worker.js assets/compressor.js assets/compressor.css \
    assets/jszip.min.js assets/JSZIP-LICENSE.txt extension/assets/
+mkdir -p extension/assets/fonts extension/assets/brand
+cp assets/fonts/Quicksand-VF.ttf assets/fonts/Quicksand-OFL.txt extension/assets/fonts/
+cp assets/brand/wery-logo.svg assets/brand/wery-mascot.png extension/assets/brand/
 cp LICENSE extension/LICENSE
 mkdir -p dist
 version=$(sed -n 's/.*"version": *"\([^"]*\)".*/\1/p' extension/manifest.json)
@@ -23,6 +26,8 @@ files=(
   icons/16.png icons/32.png icons/48.png icons/128.png
   assets/compress-core.js assets/compress-worker.js assets/compressor.js assets/compressor.css
   assets/jszip.min.js assets/JSZIP-LICENSE.txt
+  assets/fonts/Quicksand-VF.ttf assets/fonts/Quicksand-OFL.txt
+  assets/brand/wery-logo.svg assets/brand/wery-mascot.png
   LICENSE THIRD_PARTY_NOTICES.md PRIVACY.md README.md
 )
 for file in "${files[@]}"; do
