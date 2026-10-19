@@ -49,8 +49,8 @@ Open `http://127.0.0.1:8000/`. Large batches, large canvases and video exports d
 ## More AI tools
 
 - [WeryAI — AI tools for creative work](https://www.wery.ai/?utm_source=github)
-- [AI image upscaler](https://www.weryai.com/image-upscaler?utm_source=github)
-- [AI background remover](https://www.weryai.com/ai-image-background-remover?utm_source=github)
+- [Zeny — AI photo enhancer](https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-photo-enhancer?utm_source=github)
+- [Zeny — AI background remover](https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-background-remover?utm_source=github)
 
 ## License
 

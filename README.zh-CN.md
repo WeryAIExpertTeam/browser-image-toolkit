@@ -38,8 +38,8 @@ python3 -m http.server 8000 --bind 127.0.0.1
 ## 更多 AI 工具
 
 - [WeryAI 创意 AI 工具](https://www.wery.ai/?utm_source=github)
-- [AI 图片放大](https://www.weryai.com/image-upscaler?utm_source=github)
-- [AI 图片去背景](https://www.weryai.com/ai-image-background-remover?utm_source=github)
+- [Zeny — AI 图片增强](https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-photo-enhancer?utm_source=github)
+- [Zeny — AI 图片去背景](https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-background-remover?utm_source=github)
 
 ## 协议
 
