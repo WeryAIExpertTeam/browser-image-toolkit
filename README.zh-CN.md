@@ -51,4 +51,4 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ## 协议
 
-本项目代码使用 [MIT 协议](LICENSE)，版权所有 WeryAI Limited。第三方依赖保留各自协议，详见 [第三方说明](THIRD_PARTY_NOTICES.md)，其中包括 HEIC 底层解码器的 LGPL 组件。
+本项目代码使用 [MIT 协议](LICENSE)，版权所有 WeryAI Limited。第三方依赖保留各自协议，详见 [第三方说明](THIRD_PARTY_NOTICES.md)，其中包括 HEIC 底层解码器的 LGPL 组件。Quicksand 字体使用 SIL OFL 1.1 协议；`assets/brand/` 里的 wery.ai logo、图标和吉祥物是 WeryAI 的商标，不在 MIT 协议范围内。

@@ -22,3 +22,11 @@ The HEIC conversion feature loads the pinned browser decoder from jsDelivr. The 
 - Distribution: https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js
 
 Before redistributing the HEIC decoder (for example in a browser extension), review and retain its complete corresponding source, version-specific notices and required licenses. It is not included as MIT-licensed project code here.
+
+## Quicksand (font)
+
+`assets/fonts/Quicksand-VF.ttf` is the unmodified Quicksand variable font, licensed under the SIL Open Font License 1.1. License text: [assets/fonts/Quicksand-OFL.txt](assets/fonts/Quicksand-OFL.txt). Source: https://github.com/google/fonts/tree/main/ofl/quicksand
+
+## WeryAI brand assets
+
+The files in `assets/brand/` (wery.ai logo, icon and mascot) and the extension icons are trademarks of WeryAI Limited. They are not covered by the MIT license. Forks must replace them with their own branding.

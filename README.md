@@ -72,4 +72,4 @@ scripts/build-extension.sh   copies shared files into extension/ and zips it
 
 ## License
 
-Project code: [MIT](LICENSE), copyright WeryAI Limited. Third-party libraries retain their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), including the HEIC decoder's LGPL components.
+Project code: [MIT](LICENSE), copyright WeryAI Limited. Third-party libraries retain their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), including the HEIC decoder's LGPL components. The Quicksand font is under the SIL OFL 1.1. The wery.ai logo, icon and mascot in `assets/brand/` are WeryAI trademarks and are not MIT-licensed.
