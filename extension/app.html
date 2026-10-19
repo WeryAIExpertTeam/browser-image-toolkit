@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Compressor · WeryAI</title>
+<link rel="icon" href="icons/32.png">
+<link rel="stylesheet" href="assets/compressor.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="logo"><img src="icons/48.png" alt="" width="28" height="28"><span>WeryAI <b>Image Compressor</b></span></div>
+  <span class="badge">Offline · nothing is uploaded</span>
+</header>
+<main class="main">
+  <div class="from-page" id="from-page" hidden>
+    <img id="fp-thumb" alt="">
+    <div class="fp-text"><b>Image from the page</b><span id="fp-url"></span></div>
+    <button type="button" class="wc-btn wc-btn-primary" id="fp-load">Compress it</button>
+  </div>
+  <div class="card" data-compressor data-worker="assets/compress-worker.js"></div>
+</main>
+<footer class="foot">
+  <span>Need AI edits?</span>
+  <a href="https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-background-remover?utm_source=chrome_extension&utm_medium=app&utm_campaign=image_compressor" target="_blank">Remove background</a>
+  <a href="https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-photo-enhancer?utm_source=chrome_extension&utm_medium=app&utm_campaign=image_compressor" target="_blank">Enhance photo</a>
+  <a href="https://www.wery.ai/?utm_source=chrome_extension&utm_medium=app&utm_campaign=image_compressor" target="_blank">More on WeryAI</a>
+</footer>
+<script src="assets/jszip.min.js"></script>
+<script src="assets/compress-core.js"></script>
+<script src="assets/compressor.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
