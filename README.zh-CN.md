@@ -1,21 +1,29 @@
 # WeryAI Image Toolkit
 
-免费、在浏览器中处理图片的工具站。五个本地编辑工具无需账号，也不会上传图片。
+免费、在浏览器中处理图片的工具站。无需账号，不上传图片。
 
-**[在线使用 →](https://weryaiexpertteam.github.io/browser-image-toolkit/)** · [English](README.md)
+**[在线压缩图片 →](https://weryaiexpertteam.github.io/browser-image-toolkit/)** · [全部工具](https://weryaiexpertteam.github.io/browser-image-toolkit/tools.html) · [Chrome 插件](extension/) · [English](README.md)
 
-![拼贴工具](screenshots/01-collage.jpg)
+![图片压缩](screenshots/00-compressor-home.jpg)
 
-## 功能
+## 图片压缩（首页 + Chrome 插件）
+
+- 拖入、选择或粘贴 JPG、PNG、WebP、HEIC，一张或几百张都行，放进来就开始压缩。
+- 三档：高画质 / 均衡 / 最小体积；还可以指定输出格式、最长边和目标体积（KB）。
+- **智能格式：**PNG 会同时尝试 WebP 和 JPEG，取最小的；透明背景会保留。
+- **不会变大：**如果重新编码反而更大，就保留原图，标为“Already optimized”。
+- 多线程并行处理，可以单张下载或打包 ZIP。
+- 同一套引擎也做成了 Chrome 插件，在网页图片上右键即可压缩，见 [extension/README.md](extension/README.md)。
+
+## 其他工具（[tools.html](https://weryaiexpertteam.github.io/browser-image-toolkit/tools.html)）
 
 - **拼贴排版：**网格、横向或竖向拼接，编号和文件名标签，编号 ZIP 导出。
-- **图片压缩：**支持 JPG、PNG、WebP 及 HEIC/HEIF 转换；可调质量、最长边和近似目标体积，支持并行处理与 ZIP 下载。
 - **网格裁剪：**按行列切片，自定义偏移和单片尺寸，打包下载。
 - **滑动对比视频：**两张图片滑动对比，自定义缓动和分隔线，导出 WebM。
 - **封面制作：**组合背景、可拖拽浮层、箭头和文字，导出 JPG。
 - **去背景入口：**跳转到 WeryAI 的独立在线服务；不会自动传递已选图片。
 
-默认英文，右上角可以切换中文。建议使用较新桌面版 Chrome 或 Edge；WebM、Canvas 和 HEIC 的支持取决于浏览器和文件类型。
+压缩首页为英文；其他工具页右上角可以切换中英文。建议使用较新桌面版 Chrome 或 Edge；WebM、Canvas 和 HEIC 的支持取决于浏览器和文件类型。
 
 ## 隐私
 

@@ -10,6 +10,8 @@ The project's MIT license does not relicense third-party libraries.
 - Original license: [assets/JSZIP-LICENSE.txt](assets/JSZIP-LICENSE.txt)
 - Distribution: https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js
 
+The Chrome extension in `extension/` bundles a copy of JSZip (`extension/assets/jszip.min.js`) with the same license file. It does not include heic2any.
+
 ## heic2any 0.0.4 (loaded on demand, not bundled)
 
 The HEIC conversion feature loads the pinned browser decoder from jsDelivr. The heic2any wrapper has an MIT license; its bundled libheif decoder has LGPL obligations and associated third-party components. The wrapper license alone does not cover the complete bundle.
