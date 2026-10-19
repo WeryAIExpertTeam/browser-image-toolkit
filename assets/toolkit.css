@@ -1,0 +1,33 @@
+/* Public toolkit additions. No remote fonts or configuration are required. */
+.toolkit-credit { margin: 28px 0 0; padding: 18px 0; border-top: 1px solid var(--border); font-size: 12px; text-align: center; }
+.toolkit-credit a { color: var(--text-2); text-decoration: none; }
+.toolkit-credit a:hover { color: var(--text-1); text-decoration: underline; }
+.external-tool { max-width: 720px; padding: 36px; }
+.external-tool h2 { font-size: 24px; margin: 14px 0; }
+.external-tool p { max-width: 540px; color: var(--text-2); line-height: 1.7; margin-bottom: 24px; }
+.external-tool a { text-decoration: none; }
+.external-icon { color: var(--info); font-size: 48px; }
+.error { color: var(--danger); }
+.nav-item:focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.brand-sub { display: none; }
+@media (max-width: 900px) {
+  .app { grid-template-columns: 180px 1fr; }
+  .main { padding: 20px 18px 48px; }
+  .bread { display: none; }
+  .tool-3col, .tool-wide-params, .tool-canvas-major { grid-template-columns: 1fr; }
+  .pane-head-row { align-items: flex-start; gap: 14px; }
+}
+@media (max-width: 600px) {
+  .app { display: flex; flex-direction: column; height: auto; min-height: 100vh; }
+  .topbar { padding: 10px 12px; min-height: 52px; }
+  .brand-text { font-size: 12px; }
+  .brand-mark { width: 18px; height: 18px; }
+  .sidebar { flex-direction: row; flex-wrap: wrap; gap: 3px; padding: 8px; border-right: 0; border-bottom: 1px solid var(--border); overflow: visible; }
+  .side-label, .side-footer { display: none; }
+  .nav-item { padding: 7px 9px; font-size: 12px; }
+  .main { overflow: visible; padding: 18px 12px 36px; }
+  .pane-title { font-size: 21px; }
+  .external-tool { padding: 24px; }
+  .panel-title { letter-spacing: .04em; }
+  .btn { white-space: normal; }
+}
