@@ -7,8 +7,9 @@ h1, h2, h3 { font-family: var(--display); }
 .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 .dot-pink { color: var(--dot); }
 @media (prefers-color-scheme: dark) {
-  .logo-mark, .foot-brand img { filter: invert(1) hue-rotate(180deg); }
+  :root:not([data-theme="light"]) :is(.logo-mark, .foot-brand img) { filter: invert(1) hue-rotate(180deg); }
 }
+:root[data-theme="dark"] :is(.logo-mark, .foot-brand img) { filter: invert(1) hue-rotate(180deg); }
 
 /* Nav */
 .nav { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--paper) 84%, transparent); backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid transparent; transition: border-color .2s; }
