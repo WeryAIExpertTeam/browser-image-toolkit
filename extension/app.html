@@ -18,11 +18,17 @@
   </div>
 </header>
 <main class="main">
+  <section class="editor-intro" id="editor-intro" hidden aria-labelledby="editor-title">
+    <p class="editor-kicker">AI photo editor</p>
+    <h1 id="editor-title">Send this image to WeryAI</h1>
+    <p>This image needs permission before it can be opened in the AI editor.</p>
+  </section>
   <div class="from-page" id="from-page" hidden>
     <img id="fp-thumb" alt="">
     <div class="fp-text"><b>Image from the page</b><span id="fp-url"></span></div>
     <button type="button" class="wc-btn wc-btn-primary" id="fp-load">Compress it</button>
   </div>
+  <p class="editor-help" id="editor-help" hidden>Allow access to <strong id="editor-source-site"></strong> so the extension can read the selected image and place it in WeryAI's editor. Editing starts only when you choose it there. Chrome remembers source-site access; you can revoke it in the extension's settings.</p>
   <div class="card" data-compressor data-worker="assets/compress-worker.js"></div>
 </main>
 <footer class="foot">
@@ -35,6 +41,7 @@
 <script src="assets/jszip.min.js"></script>
 <script src="assets/compress-core.js"></script>
 <script src="assets/compressor.js"></script>
+<script src="handoff.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
