@@ -11,11 +11,12 @@ Visual identity and runtime theme ownership are defined in [DESIGN.md](DESIGN.md
 | Scrollbar | Shared document styles | assets/compressor.css and tools shell styles | normal document, modal content | Narrow viewport and visible overflow |
 | Toast | Existing compressor flash and per-file result rows | assets/compressor.js | routine message, persistent row result | Unsupported file and processing states |
 | Comparison | Compressor.compare | assets/compressor.js | native modal dialog | Pointer drag, range keyboard, Escape, focus restoration |
+| Send to editor | Right-click "Edit photo with AI (WeryAI)" | extension/background.js, extension/handoff.js, extension/app.js | readable image goes straight to the editor; blocked image shows a focused AI permission screen with local compressor controls hidden | Editor tab opens with the image in its upload box (blob preview appears); permission screen identifies the source and WeryAI destination |
 | Theme | Extension theme button | extension/theme.js and shared CSS tokens | Auto follows the browser; Light / Dark override | Cycle Auto → Light → Dark; reload preserves the local choice |
 
 ## Processing and recovery
 
-Files remain local. The extension fetches a selected remote image only after the user requests loading and grants site access; it does not automatically forward the image to WeryAI. Local settings use native controls, with platform-owned popup geometry and keyboard behavior.
+Compression files remain local. For right-click compression, the extension reads the selected remote image after the user requests loading and grants site access. The separate "Edit photo with AI" action reads that one selected image and places it in WeryAI's editor; blocked sources first show a site-access card. Other WeryAI links only navigate. Local settings use native controls, with platform-owned popup geometry and keyboard behavior.
 
 The shared core compares output against the original input bytes. If conversion or resizing would make it larger, the original is returned and skipped constraints are explained. A result above the requested size says Target not reached. Errors remain distinct from successful downloads.
 
