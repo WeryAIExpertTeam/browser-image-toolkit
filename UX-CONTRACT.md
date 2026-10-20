@@ -11,6 +11,7 @@ Visual identity and runtime theme ownership are defined in [DESIGN.md](DESIGN.md
 | Scrollbar | Shared document styles | assets/compressor.css and tools shell styles | normal document, modal content | Narrow viewport and visible overflow |
 | Toast | Existing compressor flash and per-file result rows | assets/compressor.js | routine message, persistent row result | Unsupported file and processing states |
 | Comparison | Compressor.compare | assets/compressor.js | native modal dialog | Pointer drag, range keyboard, Escape, focus restoration |
+| Theme | Extension theme button | extension/theme.js and shared CSS tokens | Auto follows the browser; Light / Dark override | Cycle Auto → Light → Dark; reload preserves the local choice |
 
 ## Processing and recovery
 
