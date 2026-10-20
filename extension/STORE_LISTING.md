@@ -24,7 +24,7 @@ WeryAI Image Compressor shrinks JPG, PNG and WebP files right in your browser. D
 
 Privacy: images are processed on your device and never uploaded. The extension collects no data.
 
-Need AI edits too? The right-click menu links to WeryAI's background remover and photo enhancer.
+Need AI edits too? The right-click menu links to WeryAI's background remover and AI photo editor.
 
 Open source (MIT): https://github.com/WeryAIExpertTeam/browser-image-toolkit
 

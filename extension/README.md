@@ -3,8 +3,9 @@
 Compress JPG, PNG and WebP images without uploading them. Same engine as the [web version](https://weryaiexpertteam.github.io/browser-image-toolkit/).
 
 - Click the toolbar icon to open the compressor in a tab.
+- Use the top-right theme button to cycle Auto → Light → Dark. Auto follows your browser; the choice is remembered on this device.
 - Right-click any image on a web page → **Compress image**.
-- Right-click menu also links to WeryAI's online background remover and photo enhancer (opens their site; your image is not sent).
+- Right-click menu also links to WeryAI's online background remover and AI photo editor (opens their site; your image is not sent).
 
 ## Install from source
 

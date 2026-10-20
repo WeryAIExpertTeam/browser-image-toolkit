@@ -8,7 +8,7 @@ chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({ id: 'compress', title: 'Compress image', contexts: ['image'] });
     chrome.contextMenus.create({ id: 'sep', type: 'separator', contexts: ['image'] });
     chrome.contextMenus.create({ id: 'bg', title: 'Remove background with WeryAI ↗', contexts: ['image'] });
-    chrome.contextMenus.create({ id: 'enhance', title: 'Enhance photo with WeryAI ↗', contexts: ['image'] });
+    chrome.contextMenus.create({ id: 'edit', title: 'Edit photo with AI (WeryAI) ↗', contexts: ['image'] });
   });
 });
 
@@ -19,7 +19,7 @@ chrome.contextMenus.onClicked.addListener((info) => {
     chrome.tabs.create({ url: APP + '?src=' + encodeURIComponent(info.srcUrl || '') });
   } else if (info.menuItemId === 'bg') {
     chrome.tabs.create({ url: WERY + 'ai-background-remover' + UTM });
-  } else if (info.menuItemId === 'enhance') {
-    chrome.tabs.create({ url: WERY + 'ai-photo-enhancer' + UTM });
+  } else if (info.menuItemId === 'edit') {
+    chrome.tabs.create({ url: WERY + 'ai-photo-editor' + UTM });
   }
 });

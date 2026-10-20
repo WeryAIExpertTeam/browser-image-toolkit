@@ -5,13 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Image Compressor · WeryAI</title>
 <link rel="icon" href="icons/32.png">
+<script src="theme.js"></script>
 <link rel="stylesheet" href="assets/compressor.css">
 <link rel="stylesheet" href="app.css">
 </head>
 <body>
 <header class="top">
   <a class="logo" href="https://www.wery.ai/?utm_source=chrome_extension&utm_medium=app&utm_campaign=image_compressor" target="_blank" rel="noopener"><img class="logo-mark" src="assets/brand/wery-logo.svg" alt="wery." width="33" height="36"><span class="logo-name">Image Compressor</span></a>
-  <span class="badge">Offline · nothing is uploaded</span>
+  <div class="top-right">
+    <span class="badge">Offline · nothing is uploaded</span>
+    <button type="button" class="theme-btn" id="theme-btn" aria-label="Change theme"></button>
+  </div>
 </header>
 <main class="main">
   <div class="from-page" id="from-page" hidden>
@@ -25,7 +29,7 @@
   <img class="foot-mascot" src="assets/brand/wery-mascot.png" alt="" width="28" height="28">
   <span>Need AI edits?</span>
   <a href="https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-background-remover?utm_source=chrome_extension&utm_medium=app&utm_campaign=image_compressor" target="_blank">Remove background</a>
-  <a href="https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-photo-enhancer?utm_source=chrome_extension&utm_medium=app&utm_campaign=image_compressor" target="_blank">Enhance photo</a>
+  <a href="https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-photo-editor?utm_source=chrome_extension&utm_medium=app&utm_campaign=image_compressor" target="_blank">Edit with AI</a>
   <a href="https://www.wery.ai/?utm_source=chrome_extension&utm_medium=app&utm_campaign=image_compressor" target="_blank">More on WeryAI</a>
 </footer>
 <script src="assets/jszip.min.js"></script>
