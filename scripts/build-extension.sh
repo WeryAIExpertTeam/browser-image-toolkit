@@ -22,7 +22,7 @@ stage=$(mktemp -d "${TMPDIR:-/tmp}/weryai-compressor.XXXXXX")
 trap 'rm -rf "$stage"' EXIT
 # Explicit allowlist excludes store drafts, test images, hidden files and accidental local data.
 files=(
-  manifest.json background.js app.html app.css app.js
+  manifest.json background.js app.html app.css app.js theme.js
   icons/16.png icons/32.png icons/48.png icons/128.png
   assets/compress-core.js assets/compress-worker.js assets/compressor.js assets/compressor.css
   assets/jszip.min.js assets/JSZIP-LICENSE.txt
