@@ -37,7 +37,7 @@ The compressor home page is in English. The other-tools page has an English/Chin
 
 ## Privacy
 
-Images selected in the five local editors stay in your browser. There is no image-upload endpoint, analytics or account requirement in this toolkit. Selected files are not persisted after closing the page. Only your language and last tool preference are stored locally.
+Images selected in the five local editors stay in your browser. There is no image-upload endpoint, analytics or account requirement in this toolkit. Selected files are not persisted after closing the page. The website stores your language and last tool preference locally; the extension also remembers its Auto / Light / Dark theme choice on your device.
 
 JSZip is included locally. The first HEIC/HEIF import downloads the pinned heic2any 0.0.4 decoder **code** from jsDelivr; it does not upload your image. HEIC conversion therefore needs an internet connection and may not support every HEIC variant. The other tools do not need a remote library download.
 
@@ -67,7 +67,7 @@ scripts/build-extension.sh   copies shared files into extension/ and zips it
 ## More AI tools
 
 - [WeryAI — AI tools for creative work](https://www.wery.ai/?utm_source=github)
-- [Zeny — AI photo enhancer](https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-photo-enhancer?utm_source=github)
+- [Zeny — AI photo editor](https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-photo-editor?utm_source=github)
 - [Zeny — AI background remover](https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-background-remover?utm_source=github)
 
 ## License

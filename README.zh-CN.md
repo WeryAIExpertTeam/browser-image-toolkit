@@ -27,7 +27,7 @@
 
 ## 隐私
 
-五个本地编辑工具中的图片留在浏览器内。工具站没有图片上传接口、分析追踪或账号要求；关闭页面后不保留图片，仅在本机保存语言和上次使用工具的偏好。
+五个本地编辑工具中的图片留在浏览器内。工具站没有图片上传接口、分析追踪或账号要求；关闭页面后不保留图片。网站在本机保存语言和上次使用工具的偏好；插件还会记住 Auto／Light／Dark 主题选择。
 
 JSZip 随仓库提供。第一次导入 HEIC/HEIF 时，会从 jsDelivr 下载固定版本 heic2any 0.0.4 的**解码代码**，不会上传图片。因此 HEIC 转换需要网络，且可能无法处理所有 HEIC 变体；其他工具无需下载远程库。
 
@@ -46,7 +46,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 ## 更多 AI 工具
 
 - [WeryAI 创意 AI 工具](https://www.wery.ai/?utm_source=github)
-- [Zeny — AI 图片增强](https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-photo-enhancer?utm_source=github)
+- [Zeny — AI 修图](https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-photo-editor?utm_source=github)
 - [Zeny — AI 图片去背景](https://www.wery.ai/en/@Zeny-Design-AI-Expert-Workspace/ai-background-remover?utm_source=github)
 
 ## 协议

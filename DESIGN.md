@@ -41,7 +41,7 @@ This is a hybrid: the compressor home explains the product and performs a local 
 
 Runtime tokens are authoritative: assets/compressor.css owns --ink, --paper, --card, --brand, --on-brand, --dot and their system-dark variants. Home and extension consume those tokens; tools.html uses the existing --text/--bg/--accent adapter in assets/toolkit.css. These are deliberate shell adapters, not separate redesigns. No token generator is used.
 
-Dark mode changes the home/extension primary surface to #030303 and text to #fafafa; the brand mark is inverted to white. Success/error colors remain semantic. Pink is decorative emphasis and focus, not the only indication of outcome. Scrollbars inherit the document's neutral colors and retain system handling in forced colors.
+Dark mode changes the home/extension primary surface to #030303 and text to #fafafa; the brand mark is inverted to white. Success/error colors remain semantic. Pink is decorative emphasis and focus, not the only indication of outcome. Scrollbars inherit the document's neutral colors and retain system handling in forced colors. The theme follows the browser by default; `html[data-theme="light"|"dark"]` forces one. The extension has an Auto / Light / Dark button (extension/theme.js, remembered in localStorage).
 
 ## Typography
 
