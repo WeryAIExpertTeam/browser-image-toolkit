@@ -1,0 +1,79 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Turn a Product Photo Into an Ad Brief You Can Actually Review</title><link rel="canonical" href="https://weryaiexpertteam.github.io/browser-image-toolkit/guides/en/product-photo-ad-brief.html"><style>body{max-width:780px;margin:48px auto;padding:0 24px;font:18px/1.65 system-ui;color:#182128;background:#fff}h1{line-height:1.2}h2{margin-top:2em}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%;font-size:16px}th,td{border:1px solid #ccd1d5;padding:10px;text-align:left}a{color:#254eb9}pre{overflow:auto;padding:16px;background:#f4f4f4}</style></head><body><main><h1>Turn a Product Photo Into an Ad Brief You Can Actually Review</h1>
+<p>Drafted by the Wery AI brand team using AI assistance.</p>
+<p>A single product photograph can start an advertising project, but it is not a complete creative brief. The missing information is usually more practical than visual: what is being offered, which details must remain accurate, where the asset will appear, and who signs it off. A small structured brief can make those decisions visible before anyone generates a campaign image.</p>
+<h2>Separate product evidence from creative direction</h2>
+<p>Treat the product photograph as evidence of what is visible. Treat the brief as a statement of what you want to create. If the image shows only the front of a package, it cannot verify the back. If the offer has not been approved, the brief should not quietly turn it into a promotional promise.</p>
+<p>The <a href="https://www.wery.ai/en/blogs/workflows/create-product-ads-from-one-photo">Wery AI</a> product-ad guide describes using one clear product photo as the starting point for different static and animated directions. It also notes that unseen surfaces may be estimated. Those points support an important documentation choice: keep fixed product details separate from optional scene ideas, and review each candidate against the fixed details.</p>
+<p>A plain text brief is often enough. You do not need a large asset database to begin. The point of structure is to make omissions and conflicts visible, not to create more fields than anyone will maintain. Start with the questions that affect whether an asset can be published.</p>
+<h2>Give the brief a small, explicit contract</h2>
+<p>The following YAML is an illustrative local document. Replace every example value with confirmed project information before using it. A field marked unconfirmed should remain a question for the responsible person, not become a default that slips into the artwork.</p>
+<pre><code class="language-yaml">project: sample-product-ad
+product_reference: approved-front-photo
+purpose: explain-the-item-clearly
+fixed_details:
+  - product-outline
+  - label-and-package-color
+creative_direction:
+  background: quiet-neutral-surface
+  mood: restrained
+copy_status: unconfirmed
+review_owner: unassigned
+publication_status: draft
+</code></pre>
+<p>This document distinguishes the item from the scene. A neutral background is a creative choice. A label color is a product detail. Neither should be inferred from an unrelated template. You can add a channel field when there is a real publishing destination, but avoid inventing a size or technical export requirement before the destination is known.</p>
+<p>A missing reviewer should also stay visible. Automatically filling that field with whoever runs the script would make the file look complete without establishing that the person knows the product. Keep responsibility explicit even when the rest of the workflow becomes more automated.</p>
+<p><img src="https://static.weryai.com/1598179/image/weryai_79d03702a13530bfee1a80fd52049a17.png" alt="Existing product-ad example from the Wery one-photo advertising guide"></p>
+<p><em>Example image from the Wery website.</em></p>
+<h2>Review one creative direction before multiplying assets</h2>
+<p>Choose a first composition that makes the product easy to inspect. Once that direction is suitable, consider other uses such as a launch image or a short motion asset. Generating many variations before checking the source can spread the same inaccurate detail across the whole campaign.</p>
+<table>
+<thead>
+<tr>
+<th>Brief section</th>
+<th>Reviewer question</th>
+<th>Reason to stop and revise</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Reference</td>
+<td>Is this the approved item and version?</td>
+<td>Old packaging or incomplete source</td>
+</tr>
+<tr>
+<td>Fixed details</td>
+<td>Does the asset preserve what matters?</td>
+<td>A changed label or missing component</td>
+</tr>
+<tr>
+<td>Creative direction</td>
+<td>Does the scene fit the purpose?</td>
+<td>Atmosphere overwhelms the product</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Has the offer been confirmed?</td>
+<td>An invented discount or benefit</td>
+</tr>
+<tr>
+<td>Ownership</td>
+<td>Who approves publication?</td>
+<td>No responsible reviewer</td>
+</tr>
+</tbody></table>
+<p>Do not use this table as a substitute for looking at the actual candidate. It is a way to organize that review. A field saying product-outline does not prove the outline was preserved; it simply makes the check harder to forget.</p>
+<h2>Make feedback specific enough to act on</h2>
+<p>When a candidate needs work, write feedback against the brief. Replace make it premium with a visible change such as simplify the background and leave the package as the main focal point. Replace looks wrong with the exact feature that differs from the reference. A small, precise correction is easier to evaluate than a complete change of mood.</p>
+<p>A useful revision loop is:</p>
+<ol>
+<li>Compare the candidate with the approved source.</li>
+<li>List factual discrepancies before discussing style.</li>
+<li>Choose one creative adjustment that serves the purpose.</li>
+<li>Keep the accepted decisions in the next revision.</li>
+<li>Review the whole asset again before approving it.</li>
+</ol>
+<p>If a change introduces new text, review that text as carefully as the image. A package label, a headline, and an offer can each create a different expectation. Do not let copy added during image production bypass the person responsible for the product description.</p>
+<h2>Publish the documentation with a clear boundary</h2>
+<p>For a repository-based guide, keep example briefs separate from real project files. Use fictional labels and placeholder references so the public documentation does not expose customer materials or private production notes. The example above is deliberately generic. It describes a process that a reader can adapt.</p>
+<p>If the guide includes an image, identify whether it is a reference, a concept, or an accepted result. The <a href="https://www.w3.org/WAI/tutorials/images/">W3C Images Tutorial</a> can help you write a useful description instead of using a string of promotional keywords. The written explanation should still stand on its own.</p>
+<p>The next step is to take one approved product photo and complete only the fields needed for its first asset. Resolve the unconfirmed offer and reviewer before publication. That turns a photograph into a reviewable brief while leaving the creative work open to choices you can justify.</p>
+</main></body></html>
